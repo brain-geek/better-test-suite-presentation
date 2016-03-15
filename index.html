@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>How to improve your test suite</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/material/styles/screen-16x10.css">
+	<link rel="stylesheet" href="custom_styles.css">
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>How to improve your test suite</h1>
+		<p>Or, at least, how not to f*** it up</p>
+	</header>
+
+	<section class="slide">
+		<h2>How to improve your test suite</h2>
+		<p>Brought to you by <a href="https://github.com/brain-geek">Alex Rozumii</a></p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Who am I?</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">What’s going to happen here?</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Contents</h2>
+		<ol>
+			<li class="next">Why?</li>
+			<li class="next">How?
+				<ul>
+					<li class="next">Coding</li>
+					<li class="next">Architecture</li>
+					<li class="next">Management</li>
+				</ul>
+			</li>
+			<li class="next">Side notes</li>
+		</ol>
+		<p class="note">Links to sources are in the README.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Why is testing so important?</h2>
+		<ol>
+			<li class="next">Testing provides negative feedback</li>
+			<li class="next">People expect the software to be reliable</li>
+			<li class="next">Feedback from testing improves quality</li>
+			<li class="next">Humans make mistakes all the time, we need to catch them</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Why do automated testing?</h2>
+		<ol>
+			<li class="next">Less manual work - someone does the testing anyway!</li>
+			<li class="next">Automation is more attentive</li>
+			<li class="next">Faster feedback</li>
+		</ol>
+	</section>
+
+	<section class="slide cover">
+		<img src="pictures/cost-of-testing.jpg" alt="" class="cover">
+	</section>
+
+
+	<section class="slide">
+		<h2 class="shout">Coding perspective</h2>
+	</section>
+
+
+	<section class="slide">
+		<h2 class="shout">Know the tool!</h2>
+	</section>
+
+	<section class="slide">
+		<h2>The tool has the purpose/reasoning</h2>
+
+		<div class="next">
+			<blockquote>
+				I started TestNG out of frustration for some JUnit deficiencies
+			</blockquote>
+
+			<figcaption>testng.org</figcaption>
+		</div>
+
+		<div class="next">
+			<blockquote>
+				RSpec gives you a way to encapsulate what you’re testing via the describe block, and it’s friend context.
+			</blockquote>
+
+			<figcaption>An Introduction To RSpec</figcaption>
+		</div>
+
+		<div class="next">
+			<blockquote>
+				Mocha is a feature-rich JavaScript test framework ..., making asynchronous testing simple and fun.
+			</blockquote>
+
+			<figcaption>mochajs.org</figcaption>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">It has more features then you think</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Autotest suite is primarily software</h2>
+
+		<ol>
+			<li class="next">Do the code review!</li>
+			<li class="next">Add static code analysis to the flow</li>
+			<li class="next">Refactoring is good (but keep it separate)</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>The Boy Scout Rule</h2>
+
+		<blockquote>
+			Always leave the campground cleaner than you found it
+		</blockquote>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Delete the code</h2>
+	</section>
+
+
+	<section class="slide">
+		<h2>Coding summary:</h2>
+		<ol>
+			<li>Know the tool</li>
+			<li>Test suite is primarily software</li>
+			<li>The Boy Scout Rule</li>
+			<li>Delete the code</li>
+		</ol>
+	</section>
+
+
+	<section class="slide">
+		<h2 class="shout">Architecture perspective</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Do the design</h2>
+		<ol>
+			<li class="next">Test design</li>
+			<li class="next">Software architecture</li>
+
+			<p class="note next">That's different points of view!</p>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Test design</h2>
+
+		<ol>
+			<li class="next">Make up the boundaries and test accordingly</li>
+			<li class="next">Have a useful descriptions</li>
+			<li class="next">Structure everything (e.g. coverage table)</li>
+			<li class="next">Remove the duplicate tests</li>
+			<li class="next">Add the missing ones</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Software architecture</h2>
+	</section>
+
+	<section class="slide">
+		<h2>What is pattern?</h2>
+
+		<blockquote>
+			An architectural pattern is a general, reusable solution to a commonly occurring problem in software architecture within a given context
+		</blockquote>
+
+		<figcaption>Wikipedia</figcaption>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Use the patterns</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Page object</h2>
+
+		<img src="pictures/page-object.jpg" />
+	</section>
+
+	<section class="slide">
+		<h2>Page element</h2>
+
+		<img src="pictures/page-element.jpg" />
+	</section>
+
+	<section class="slide black">
+		<h2 style="color: white">Decorator</h2>
+
+		<img class="cover" src="pictures/decorator.jpg" />
+	</section>
+
+	<section class="slide black">
+		<h2>Factory</h2>
+
+		<img class="cover" src="pictures/coffee-buttons.jpg" />
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Use composition instead of inheritance</h2>
+	</section>
+
+	<section class="slide black">
+		<img src="pictures/strangers.jpg" class="cover" />
+	</section>
+
+	<section class="slide">
+		<h2>Law of Demeter</h2>
+		<p class="next">The guideline was proposed at Northeastern University towards the end of 1987, and can be succinctly summarized in each of the following ways:</p>
+
+		<ol>
+			<li class="next">Each unit should have only limited knowledge about other units: only units "closely" related to the current unit.</li>
+			<li class="next">Each unit should only talk to its friends; don't talk to strangers.</li>
+			<li class="next">Only talk to your immediate friends.</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Architecture summary:</h2>
+		<ol>
+			<li>Do the test design</li>
+			<li>Do the software architecture</li>
+			<li>Learn from the both sides</li>
+		</ol>
+	</section>
+
+<!-- Do the test design
+Equivalence classes
+Clean up
+Env -> side effect or Side effect -> behaviour
+Use patterns (abstractions may be good)
+Page object
+Page structure
+Methods
+Page factory
+Simplify the traversal and navigation
+Page element (composition)
+Composition instead of inheritance
+Hide method chaining / Decoration
+ -->
+
+
+	<section class="slide">
+		<h2 class="shout">Project perspective</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Project perspective</h2>
+
+		<ol>
+			<li class="next">Know the application</li>
+			<li class="next">You cannot automate everything</li>
+			<li class="next">Integrate testing and development</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Change something small in the project</h2>
+		<p>
+			<b>Testing is hard.</b>
+		</p>
+
+		<p class="next">
+			So helping members of your team with tests is not bad. Adding few selectors, renaming some inputs isn't hard, but will boost performance of the automated testing team.
+		<p>
+
+		<footer class="footer">
+			<p>Improving testability improves project quality.</p>
+		</footer>
+	</section>
+
+	<section class="slide">
+		<h2>Negative feedback is the value of testing</h2>
+
+		<ol>
+			<li class="next">Fast feedback cycle is important</li>
+			<li class="next">Stable CI is a must</li>
+			<li class="next">Fix the flickering tests</li>
+			<li class="next">Environments must be as similar as possible</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Project perspective summary:</h2>
+		<ol>
+			<li>Know the application</li>
+			<li>You cannot automate everything</li>
+			<li>Improve the feedback quality/speed</li>
+		</ol>
+	</section>
+
+<!--
+Know the application
+You cannot automate everything
+Integrate testing and development
+Change something small in the project to help with testing
+Feedback is the main reason why we have it
+Fast feedback cycle is important
+CI is a must
+Fix the flickering tests
+ -->
+
+
+	<section class="slide">
+		<h2 class="shout">Other notes</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Forking open-source projects is bad idea</h2>
+	</section>
+
+	<section class="slide">
+		<h2>There IS already a tool for that</h2>
+
+		<p class="next">
+			NIH (Not invented here) syndrome leads to huge resource losses and maintenance hell.
+		</p>
+
+		<p class="next">
+			Don't write your own bicycle.
+		<p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Just look from one more standpoint</h2>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">Thanks! Any questions?</h2>
+	</section>
+
+<!-- Don’t fork anything
+There IS already a tool for that
+All tools are great
+Just look from one more standpoint
+ -->
+
+	<p class="badge">
+		<a href="https://github.com/brain-geek/better-test-suite-presentation">Fork me on GitHub</a>
+	</p>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2016 Alex Rozumiy. -->
+	body>
+</html>
